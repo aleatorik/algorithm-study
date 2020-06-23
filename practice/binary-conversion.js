@@ -15,6 +15,7 @@ while (true) {
     result += '1';
   }
   x = Math.floor(x / 2); // -- 2로 나눴을 때 소수점 자리가 붙는 경우?
+  
   // Math.ceil() : 소수점 올림
   // Math.floor() : 소수점 버림
   // Math.round() : 소수점 반올림
