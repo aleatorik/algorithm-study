@@ -39,3 +39,23 @@ for (var variable of a) {
   }
 }
 console.log(m);
+
+// 가장 많이 쓰이는 최대값, 최소값 구하는 방법
+/*
+console.log(Math.max(10, 20));
+console.log(Math.min(10, 20));
+*/
+// 위의 Math.max/min은 아주 큰 값을 만났을 때 에러가 나기도함, 메모리 효율적으로도 아래 방법보다 좋지 않음
+
+let b = [6, 5, 4, 3, 2];
+const reducerOne = (accumulator, currentvalue) => accumulator + currentvalue;
+const reducerTwo = (accumulator, currentvalue) => accumulator - currentvalue;
+const reducerThree = (accumulator, currentvalue) =>
+  accumulator > currentvalue ? accumulator : currentvalue;
+const reducerFour = (accumulator, currentvalue) =>
+  accumulator < currentvalue ? accumulator : currentvalue;
+
+console.log(b.reduce(reducerOne));
+console.log(b.reduce(reducerTwo));
+console.log(b.reduce(reducerThree));
+console.log(b.reduce(reducerFour));

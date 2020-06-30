@@ -17,10 +17,9 @@ console.log(result);
 */
 // 위에는 역순으로 출력됨
 
-// 아래는 순서대로 출력됨
+// 아래는 정순으로 출력됨
 //방법1: result = '0' + result;
 //방법2: console.log(result.split('').reverse().join(''));
-/*
 let result = '';
 let x = 'daniel';
 while (true) {
@@ -35,13 +34,15 @@ while (true) {
   console.log(x);
 }
 console.log(result);
-*/
+
+/*
 function 문자열역순(문자) {
   if (문자.length == 1) {
     return 문자;
   }
   console.log(문자.slice(0, 문자.length - 1));
   return 문자[문자.length - 1] + 문자열역순(문자.slice(0, 문자.length - 1));
+  //         ㄴ문자열 마지막 문자           ㄴ문자열 마지막 문자 제외한 나머지 문자열
 }
 
 console.log(문자열역순('daniel'));
