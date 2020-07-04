@@ -7,8 +7,8 @@ let 정렬된배열 = [];
 //  }
 
 for (var i = 0; i < a.length; i++) {
-  정렬된배열.push(Math.min.apply(null, a));
-  a.splice(a.indexOf(Math.min.apply(null, a)), 1);
+  정렬된배열.push(Math.min.apply(null, a)); // 정렬된 배열에 최소값 순서대로 넣기
+  a.splice(a.indexOf(Math.min.apply(null, a)), 1); // a 배열 정리 --최소값 인덱스 찾고, 그 최소값 인덱스 자리 삭제
   console.log(a);
   console.log(정렬된배열);
 }
