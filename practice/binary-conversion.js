@@ -23,7 +23,7 @@ while (true) {
 
   //<<계속해서 무한반복 되지 않도록 종료조건 걸기>>
   if (x == 1 || x == 0) {
-    //(line 22) 맨 마지막의 x 값 - 6번줄의 '1'
+    //6번줄의 '1'
     result += String(x); // String() --string값으로 변환
     break; // 종료가 되어야 하기 때문에 break 걸어줌
   }
