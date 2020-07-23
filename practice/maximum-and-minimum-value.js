@@ -40,6 +40,27 @@ for (var variable of a) {
 }
 console.log(m);
 
+//for 반복문을 이용한 최소값 알고리즘의 function 함수
+
+function findSmallestElement(arr) {
+  if (arr.length == 0) {
+    return 0;
+  } else {
+    let minNum = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      let value = arr[i];
+      console.log('1');
+      if (minNum > value) {
+        minNum = value;
+      }
+    }
+    return minNum;
+  }
+}
+
+let test = [20, 200, 23, 1, 3, 9];
+findSmallestElement(test);
+
 // 가장 많이 쓰이는 최대값, 최소값 구하는 방법
 /*
 console.log(Math.max(10, 20));
