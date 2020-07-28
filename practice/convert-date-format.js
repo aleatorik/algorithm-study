@@ -30,3 +30,15 @@ const formatDate = dates.map((x) => {
 
 formatDate;
 // [ '2019년 03월 21일 ', '2019년 04월 21일 ', '2019년 05월 21일 ' ];
+
+// Another solution
+const formatDate2 = (dates) => {
+  let str = dates.map(function (arr) {
+    let date = arr.split('-');
+    console.log(`${date[0]}년 ${date[1]}월 ${date[2]}일`);
+    return `${date[0]}년 ${date[1]}월 ${date[2]}일`;
+  });
+  return str;
+};
+
+formatDate2(['2019-03-21', '2019-04-21', '2019-05-21']);
