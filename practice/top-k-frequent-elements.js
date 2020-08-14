@@ -41,3 +41,25 @@ result = majority.push();
 return result;
 
 // k 개수 -> count를 0부터
+
+// Solution below
+
+function topK(nums, k) {
+  let obj = {};
+  let arr = [];
+  nums.forEach((el) => {
+    if (obj[el]) {
+      obj[el]++;
+    } else {
+      obj[el] = 1;
+    }
+  });
+  for (let properyName in obj) {
+    arr.push([properyName, obj[properyName]]);
+  }
+  return arr
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, k)
+    .map((el) => Number(el[0]));
+}
+topK([1, 2, 2, 2, 3, 4, 4, 7, 4], 2);
