@@ -11,3 +11,11 @@ function get_prefix(str) {
 }
 
 get_prefix("test-over");
+
+// Modal Solution
+
+function get_prefix(word) {
+  return word.split("-")[0];
+}
+
+get_prefix("BTC-KRW");
